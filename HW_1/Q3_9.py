@@ -1,5 +1,8 @@
+""" Contact : PayalMohapatra2026@u.northwestern.edu
+Sources :
+https://github.com/jermwatt/machine_learning_refined/tree/gh-pages/mlrefined_libraries
+"""
 from numpy.core.fromnumeric import argmax
-#import mnist
 import autograd.numpy as np
 import matplotlib.pyplot as plt
 from scipy.stats import mode
@@ -8,7 +11,6 @@ from optimizers_only import gradient_descent
 from optimizers_only import gradient_descent_momentum
 
 w = np.array([[10.0], [1.0]])
-# b = np.array([[0.0], [1.0]])
 C = np.array([[0.5, 0],[0, 9.75]])
 
 ## cost function
@@ -42,10 +44,10 @@ plt.plot(cost_history)
 # alpha_choice = 0.001
 # weight_history,cost_history = gradient_descent(model ,alpha_choice,max_its,w)
 # plt.plot(cost_history)
-
-# plt.xlabel('Iterations')
-# plt.ylabel('Cost function (g(w))')
-plt.legend(["gradient descent","beta = 0.2","beta=0.7"])
+plt.xlabel('Iterations')
+plt.ylabel('Cost function (g(w))')
+plt.legend(["standard gradient descent","moment accelerated gradient descent with beta = 0.2","moment accelerated gradient descent with beta=0.7"])
+plt.title('Cost functions history plot with standard and moment accelerated gradient descent optimisation.')
 plt.show()
 
 #Finding :: Anomaly at point 1 since only one point to average

@@ -1,5 +1,8 @@
+""" Contact : PayalMohapatra2026@u.northwestern.edu
+Sources :
+https://github.com/jermwatt/machine_learning_refined/tree/gh-pages/mlrefined_libraries
+"""
 from numpy.core.fromnumeric import argmax
-#import mnist
 import autograd.numpy as np
 import matplotlib.pyplot as plt
 from scipy.stats import mode
@@ -14,7 +17,7 @@ def model(w):
     g = np.dot(w.T,w)
     return g
 
-max_its = 100
+max_its = 1
 alpha_choice = 1
 weight_history_1,cost_history = gradient_descent(model ,alpha_choice,max_its,w)
 plt.plot(cost_history)

@@ -1,5 +1,8 @@
+""" Contact : PayalMohapatra2026@u.northwestern.edu
+Sources :
+https://github.com/jermwatt/machine_learning_refined/tree/gh-pages/mlrefined_libraries
+"""
 from numpy.core.fromnumeric import argmax
-#import mnist
 import autograd.numpy as np
 import matplotlib.pyplot as plt
 from scipy.stats import mode
@@ -26,5 +29,8 @@ plt.plot(cost_history)
 weight_history,cost_history = gradient_descent_full_norm(model ,alpha_choice,max_its,w)
 plt.plot(cost_history)
 
+plt.xlabel('Iterations')
+plt.ylabel('Cost function (g(w))')
 plt.legend(["Gradient Descent","Full Normalised Gradient Descent"])
+plt.title('Cost functions history plot with standard and fully normalised gradient descent optimisation.')
 plt.show()
